@@ -3,6 +3,14 @@ object sanMartin {
 	var caballos = 10
 	var tropas = []
 	
+	method tropas(){
+		return tropas
+	}
+	
+	method caballos() {
+		return caballos
+	}
+	
 	method reclutar(tropa) {
 		tropas.add(tropa)
 	}
@@ -86,7 +94,7 @@ object sanLorenzo {
 }
 
 object capitanRealista {
-	var soldados = 0
+	var soldados = 5
 	var coeficienteDePoder = 100
 	
 	method tamanioEjercito() {
@@ -144,6 +152,9 @@ object pepita{
 object gladys{
 	method entrenar(){
 	}
+	method poder(){
+		return 0
+	}
 	method molesta(){
 		return true
 	}
@@ -154,13 +165,15 @@ object gladys{
 
 
 object luisBeltran{
+	var poder = 5
 	method entrenar(){
+		poder += 1
 	}
 	method molesta(){
 		return false
 	}
 	method poder(){
-		return 5
+		return poder
 	}
 	method puedeDesertar() {
 		return true

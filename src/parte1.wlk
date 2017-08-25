@@ -49,7 +49,7 @@ object sanMartin {
 }
 
 object capitanRealista {
-	var soldados = 0
+	var soldados = 5
 	var coeficienteDePoder = 100
 	
 	method tamanioEjercito() {

@@ -1,9 +1,10 @@
-import parte1.*
+import parte2.*
 describe "San Martin" {
 	fixture{
 		sanMartin.reclutar(luisBeltran)
 	}
 	
+	/** Parte 1, los tests deben seguir andando! */
 	test "empieza con 10 caballos" {
 		assert.equals(10, sanMartin.caballos())
 	}
@@ -26,5 +27,22 @@ describe "San Martin" {
 		10.times { sanMartin.reclutar(superAgente86) }
 		assert.that(sanMartin.ejercitoMasNumeroso(capitanRealista))
 	}
+	
+	/** Parte 2 */
+	
+	test "si va a visitar la ciudad de San Lorenzo, sus tropas se entrenan" {
+		sanMartin.visitar(sanLorenzo)
+		assert.equals(6, luisBeltran.poder())
+	}
+	test "si va a visitar la ciudad de San Lorenzo, San Martin tiene mas tropas" {
+		sanMartin.visitar(sanLorenzo)
+		assert.equals(3, sanMartin.tropas().size())
+	}
+	
+	test "si ataca al realista, lo daña" {
+		sanMartin.atacar(capitanRealista)
+		assert.equals(497.5, capitanRealista.poder())
+	}
+	
 }	
 		
