@@ -11,8 +11,6 @@ program parte1Program {
 	console.println(sanMartin.formaParte(superAgente86))
 	console.println(sanMartin.suficientesCaballos())
 	sanMartin.echarATodos()
-	
-	
 	sanMartin.reclutar(cabral)
 	sanMartin.reclutar(luisBeltran)
 	console.println(sanMartin)
